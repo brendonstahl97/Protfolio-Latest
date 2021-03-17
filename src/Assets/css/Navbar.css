@@ -62,6 +62,14 @@ button {
     color: white;
 }
 
+
+@media (max-width: 330px) {
+  .navbar .navbar-brand {
+    font-size: 2rem;
+  }
+}
+
+
 /* Dropdown Animation */
 
 @media (min-width: 992px) {
@@ -70,8 +78,8 @@ button {
       -webkit-animation-duration: 0.3s;
       animation-fill-mode: both;
       -webkit-animation-fill-mode: both;
-    }
   }
+}
   
   @keyframes slideIn {
     0% {

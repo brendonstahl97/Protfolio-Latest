@@ -37,3 +37,10 @@
     border-radius: 100%;
     text-decoration: none;
 }
+
+@media (max-width: 576px) {
+    .socialBox {
+        width: 70px;
+        height: 70px;
+    }
+}
