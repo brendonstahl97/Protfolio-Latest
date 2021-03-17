@@ -24,7 +24,7 @@ export default function CustomNavbar() {
     return (
         <div>
             <Navbar expand="md" className='text-white'>
-                <NavbarBrand href="/">Brendon Stahl</NavbarBrand>
+                <NavbarBrand className='mr-4' href="/">Brendon Stahl</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="me-auto" navbar>
