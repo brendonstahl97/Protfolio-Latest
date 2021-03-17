@@ -1,0 +1,11 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.socialBox {
+    border-radius: 100%;
+    border-width: 20px;
+    border-color: black;
+    width: 110px;
+    height: 110px;
+    background-color: cadetblue;
+}
