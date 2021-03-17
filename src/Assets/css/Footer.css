@@ -21,15 +21,12 @@
     background-color: #92e0fb;
 }
 
-.socialBox:hover,
-.socialBox:focus { 
+.socialBox:hover { 
     background-color: rgb(255, 245, 158);
 }
 
 .socialBox:hover i.fas,
-.socialBox:hover i.fab,
-.socialBox:focus i.fas,
-.socialBox:focus i.fab { 
+.socialBox:hover i.fab { 
     color: #0099ff;
 }
 

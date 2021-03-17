@@ -12,9 +12,7 @@
 }
 
 .navbar .nav-link:hover,
-.navbar .nav-link:focus,
-.navbar .navbar-brand:hover,
-.navbar .navbar-brand:focus {
+.navbar .navbar-brand:hover {
     color: rgb(255, 236, 66);
     text-decoration: none;
 }
@@ -34,8 +32,7 @@
     color: #555;
 }
 
-.navbar.active .nav-link:hover,
-.navbar.active .nav-link:focus {
+.navbar.active .nav-link:hover {
     color: #555;
     text-decoration: none;
 }
