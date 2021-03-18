@@ -8,11 +8,6 @@ import {
     Nav,
     NavItem,
     NavLink
-    // UncontrolledDropdown,
-    // DropdownToggle,
-    // DropdownMenu,
-    // DropdownItem,
-    // NavbarText
 } from 'reactstrap';
 
 export default function CustomNavbar() {
@@ -29,13 +24,13 @@ export default function CustomNavbar() {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="me-auto" navbar>
                         <NavItem>
-                            <NavLink href="#">About Me</NavLink>
+                            <NavLink href="/">About Me</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">Projects</NavLink>
+                            <NavLink href="/projects">Projects</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">Contact Me</NavLink>
+                            <NavLink href="/contact">Contact Me</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>

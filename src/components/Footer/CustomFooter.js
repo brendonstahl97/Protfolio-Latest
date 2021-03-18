@@ -7,7 +7,7 @@ import {
 
 export default function CustomFooter() {
     return (
-        <footer className='customFooter'>
+        <footer className='customFooter' id="footer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#0099ff" fillOpacity="1" d="M0,288L48,288C96,288,192,288,288,256C384,224,480,160,576,122.7C672,85,768,75,864
                 ,96C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,
@@ -35,8 +35,8 @@ export default function CustomFooter() {
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='justify-content-center my-3'>
-                            <p>Copyright &copy; Brendon Stahl 2021</p>
+                        <Col className='justify-content-center mb-0 p-0'>
+                            <p className='mb-0'>Copyright &copy; Brendon Stahl 2021</p>
                         </Col>
                     </Row>
                 </Container>

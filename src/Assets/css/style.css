@@ -1,20 +1,45 @@
-/* Font */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 /* #0099ff */
 
 body {
     background-color: #92e0fb;
-    font-family: 'Lobster', cursive;;
+    font-family: 'Lobster', cursive;
 }
 
 p, h1, h2, h3, h4, h5 {
-    color: white;
+    color: #015c99;
+    /* text-shadow: 1px 1px #000000; */
+    font-family: 'Poppins', cursive;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40pt;
+    text-shadow: 1px 1px #000000;
+}
+
+p {
+    font-size: large;
 }
 
 
 i.fas,
 i.fab {
     color: white;
+    text-shadow: 1px 1px #000000;
 }
 
+.contentWrap {
+    min-height: calc(100vh - 596px);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25% 25% 25% 25% / 25% 25% 25% 25% ;
+    background-color: rgba(222, 252, 253, 0.945);
+    width: 90%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+};

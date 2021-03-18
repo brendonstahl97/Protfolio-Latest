@@ -1,5 +1,5 @@
 .customFooter {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -9,6 +9,7 @@
     width:100%;
     height: 120px;
     background-color: #0099ff;
+    padding-bottom: 2vh;
 }
 
 .socialBox {
@@ -41,3 +42,5 @@
         height: 70px;
     }
 }
+
+#footer{ clear:both; }
