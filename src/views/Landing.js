@@ -17,8 +17,8 @@ export default function Landing() {
                 </Row>
                 <Row className="align-items-center pb-3">
                     <Col >
-                        <img style={{ marginRight: "auto", marginLeft: "auto" }} src="Headshot.jpg" alt='Headshot' width="200" height="200" className="d-sm-none" />
-                        <img style={{ marginRight: "auto", marginLeft: "auto" }} src="Headshot.jpg" alt='Headshot' width="250" height="250" className="d-none d-sm-block" />
+                        <img style={{ marginRight: "auto", marginLeft: "auto" }} className="d-sm-none mb-3" src="Headshot.jpg" alt='Headshot' width="200" height="200" />
+                        <img style={{ marginRight: "auto", marginLeft: "auto" }} className="d-none d-sm-block mb-3" src="Headshot.jpg" alt='Headshot' width="250" height="250"/>
                     </Col>
                     <Col>
                         <h1>Brendon Stahl</h1>
@@ -48,6 +48,9 @@ export default function Landing() {
                         <img style={{ marginRight: "auto", marginLeft: "auto" }} src="UNCW.png" alt='Headshot' width="150" height="170" className="d-sm-none" />
                         <img style={{ marginRight: "auto", marginLeft: "auto" }} src="UNCW.png" alt='Headshot' width="300" height="340" className="d-none d-sm-block" />
                     </Col>
+                </Row>
+                <Row>
+                    
                 </Row>
 
             </Container>
