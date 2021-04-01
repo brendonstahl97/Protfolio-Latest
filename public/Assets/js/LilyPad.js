@@ -8,11 +8,11 @@ class Pad {
         this.pos = createVector(locationVect.x + this.r, locationVect.y + this.r);
 
         this.velocity = createVector(random(-0.5, .5), random(-1.2, 0));
-        this.acceleration = createVector(.1, 0);
+        this.acceleration = createVector(0, 0);
 
         this.maxVel = 1;
-        this.forceMultiplier = 0.011;
-        this.mouseMultiplier = 1000;
+        this.forceMultiplier = 0.005;
+        this.scrollMultiplier = random(1.5, 3);
     };
 
     update() {
@@ -25,7 +25,7 @@ class Pad {
         this.acceleration.limit(1);
         if (this.isOffScreen()) {
             this.fixOffScreen();
-        }
+        };
     };
 
     getForce(forceArray) {
@@ -33,23 +33,14 @@ class Pad {
         const y = Math.floor(this.pos.y / current.interval);
         const index = x + y * current.cols;
         const force = forceArray[index];
-        this.applyForce(force);
+        this.applyForce(force, false);
     };
 
-    getMouseForce() {
-        const mousePos = createVector(mouseX, mouseY);
-        const force = mousePos.sub(this.pos).mult(-1);
-
-        const prevAcc = this.acceleration;
-        this.applyForce(force, true);
-        this.acceleration = prevAcc;
-    }
-
-    applyForce(force, isMouse) {
+    applyForce(force, isScrollForce) {
         if (force != null) {
             let newForce;
-            if (isMouse) {
-                newForce = force.setMag((1 / force.mag()) * this.mouseMultiplier);
+            if(isScrollForce) {
+                newForce = force.setMag(this.scrollMultiplier);
             } else {
                 newForce = force.setMag(this.forceMultiplier);
             }
@@ -72,8 +63,8 @@ class Pad {
             return true;
         } else {
             return false;
-        }
-    }
+        };
+    };
 
     findOffScreen() {
         if (this.pos.x < 0 - this.r - spawnOffset) {

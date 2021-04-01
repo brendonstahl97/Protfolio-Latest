@@ -1,0 +1,28 @@
+.crateContainter{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.crateContainter .crateTop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform .5s cubic-bezier(0.68,-0.62, 0.33, 1.79);
+    z-index: 1;
+}
+
+.crateContainter .crateOpen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.crateContainter:hover .crateTop {
+    transform: translatey(-100%);
+}

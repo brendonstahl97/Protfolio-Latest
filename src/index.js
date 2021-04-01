@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Assets/css/style.css';
 import './Assets/css/Navbar.css';
 import './Assets/css/Footer.css';
+import './Assets/css/Crate.css';
 
 ReactDOM.render(
   <React.StrictMode>

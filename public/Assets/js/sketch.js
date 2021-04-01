@@ -2,29 +2,35 @@ let canvas;
 let img;
 let current;
 
+let scrollForcePos;
+
 const radius = 25;
 const spawnOffset = radius;
+
+let prevScroll;
 
 let pads = [];
 
 let respawns = {};
 
 function preload() {
-    img = loadImage('./Assets/img/Pad.png');
+    img = loadImage('Pad.png');
 };
 
 function setup() {
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.style("z-index", "-1");
+    canvas = createCanvas(windowWidth, windowHeight + 300);
+    // canvas.style("z-index", "1");
+    // canvas.style('display', 'block');
     canvas.position(0,0);
-    canvas.style("position", "fixed");
-    background(146, 224, 251);
+    background(0, 100, 200);
     noStroke();
+
+    scrollForcePos = createVector(width/2, 0);
 
     current = new VectorField(windowWidth, windowHeight);
     current.createField();
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 50; i++) {
         lily = new Pad(createVector(random(0, width), random(0, height)), radius * 2);
         pads.push(lily);
     };
@@ -39,27 +45,54 @@ function setup() {
 };
 
 function draw() {
-    background(146, 224, 251);
+    background(0, 100, 200);
     current.createField();
 
     pads.forEach(pad => {
         pad.run();
     });
+
+    if (didScrollDown()) {
+        scrollForce();
+    };
+
+    if (prevScroll != window.scrollY) {
+        prevScroll = window.scrollY;
+    }
 };
 
+
+// TODO fix resize respawn error/
 function windowResized() {
     canvas = resizeCanvas(windowWidth, windowHeight);
+    scrollForcePos = createVector(width/2, 0);
     respawns = {
-        left: windowWidth + this.r,
+        left: width + this.r,
         right: 0 - this.r,
-        top: windowHeight + this.r,
+        top: height + this.r,
         bottom: 0 - this.r,
     };
+
+    // location.reload();
 };
 
-function mousePressed() {
+const didScrollDown = () => {
+    if (window.scrollY - prevScroll > 0) {
+        return true;
+    };
+    return false;
+};
+
+const scrollForce = () => {
     pads.forEach(pad => {
-        pad.getMouseForce();
+        let force;
+        if(pad.pos.x >= width/2) {
+            force = createVector(1, 1.5);
+        } else {
+
+            force = createVector(-1, 1.5);
+        }
+        pad.applyForce(force, true);
     });
 };
 

@@ -27,13 +27,13 @@ class VectorField {
                 this.forceVectors[index] = v;
                 yOffset += this.step;
 
-                
+                stroke(255, 50);
+
                 // This section of code displays the vector field on the canvas
                 
                 // push();
                 // translate(x * this.interval, y * this.interval);
                 // rotate(v.heading());
-                // stroke(0);
                 // line(0, 0, this.interval, 0);
                 // pop();
 
