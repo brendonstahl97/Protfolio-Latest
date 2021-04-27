@@ -111,12 +111,10 @@ const Test2 = (props) => {
                 top: p5.height + radius + spawnOffset,
                 bottom: 0 - radius - spawnOffset
             };
-
-            // location.reload();
         };
 
         //Classes
-
+        
         class Pad {
             constructor(locationVect, r) {
                 //radius of pad

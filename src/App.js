@@ -11,7 +11,9 @@ import Landing from './views/Landing';
 import Projects from './views/Projects';
 import Contact from './views/ContactMe';
 import Test2 from './components/test2';
+
 import img from './Assets/img/Pad.png';
+import boat from './Assets/img/Boat.png';
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           </Route>
           <Route path="*">
             <div className="contentWrap">
+              <img src={boat} className='Boat' alt="Boat"></img>
               <Landing />
             </div>
           </Route>
