@@ -10,7 +10,8 @@ body {
 }
 
 p, h1, h2, h3, h4, h5 {
-    color: #015c99;
+    /* color: #015c99; */
+    color: white;
     /* text-shadow: 1px 1px #000000; */
     font-family: 'Poppins', cursive;
 }
@@ -40,7 +41,7 @@ i.fab {
     /* border-radius: 25% 25% 25% 25% / 25% 25% 25% 25% ; */
     /* background-color: rgba(222, 252, 253, 0.945); */
     width: 80%;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     margin-bottom: 50vh;
 };
 

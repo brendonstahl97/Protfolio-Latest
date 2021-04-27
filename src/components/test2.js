@@ -114,7 +114,7 @@ const Test2 = (props) => {
         };
 
         //Classes
-        
+
         class Pad {
             constructor(locationVect, r) {
                 //radius of pad
