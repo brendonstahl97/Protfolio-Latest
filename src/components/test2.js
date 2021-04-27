@@ -19,7 +19,7 @@ const Test2 = (props) => {
         const radius = 25;
         const spawnOffset = radius;
 
-        const numPads = 50;
+        const numPads = 25;
 
         let prevScroll;
 
@@ -49,12 +49,14 @@ const Test2 = (props) => {
             });
         };
 
+        //load image to memory prior to starting sketch
         p5.preload = () => {
             if(props.img) {
                 img = p5.loadImage(props.img);
             }
         };
 
+        //Run once prior to starting canvas loop
         p5.setup = () => {
             canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight);
             canvas.style("position", "fixed");
@@ -80,6 +82,7 @@ const Test2 = (props) => {
             };
         };
 
+        //Run's once per frame
         p5.draw = () => {
 
             p5.background('#92e0fb');
@@ -99,7 +102,7 @@ const Test2 = (props) => {
         };
 
         // Code runs when the window is resized
-        p5.windowResized = (p5) => {
+        p5.windowResized = () => {
             canvas = p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
             // scrollForcePos = p5.createVector(p5.width/2, 0);
             respawns = {
@@ -272,6 +275,7 @@ const Test2 = (props) => {
             };
         };
     };
+
 
     useEffect(() => {
         let myP5 = new p5(Sketch, myRef.current)
